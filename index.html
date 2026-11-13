@@ -75,6 +75,8 @@ p{margin:0}
 .dpad .u{grid-column:2;grid-row:1}.dpad .l{grid-column:1;grid-row:2}.dpad .d{grid-column:2;grid-row:2}.dpad .r{grid-column:3;grid-row:2}
 .keyhint{display:none;font-size:.8rem;opacity:.75;margin:0}
 @media (hover:hover) and (pointer:fine){.dpad{display:none}.keyhint{display:block}}
+/* leave room under the D-pad so host badges (e.g. a bottom-right 'Powered by' pill) never cover the controls */
+@media (hover:none),(pointer:coarse){.gbot{padding-bottom:calc(104px + env(safe-area-inset-bottom))}}
 .skip{font:inherit;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);background:none;border:1px solid rgba(234,223,203,.6);border-radius:999px;cursor:pointer;padding:.45rem .9rem;min-width:96px;margin:-.3rem 0}
 .plate{width:min(78vw,380px);padding:clamp(3.5rem,16vw,6rem) 1.5rem clamp(2.5rem,9vw,3.5rem);background:var(--indigo);border:1px solid var(--cream);border-radius:999px 999px 14px 14px;outline:1px solid rgba(234,223,203,.45);outline-offset:7px;text-align:center}
 .plate .names{font-family:var(--display);font-size:clamp(2rem,9.5vw,3.3rem);line-height:1;margin:1.1rem 0 1rem;white-space:nowrap}
